@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<platformpool>
+  <platform name="iphone">
+		<para name="remote_server" value="http://localhost:4723/wd/hub" />
+		<para name="device" value="iphone Simulator" />
+		<para name="app" value="/...path/WebViewApp.app" />	
+  </platform>
+  <platform name="ipad">
+		<para name="remote_server" value="http://10.59.154.141:4723/wd/hub" />
+		<para name="device" value="ipad Simulator" />
+		<para name="app" value="/...path/WebViewApp.app" />	
+  </platform>
+  <platform name="selendroid">
+		<para name="remote_server" value="http://127.0.0.1:4723/wd/hub" />
+		<para name="device" value="selendroid" />
+		<para name="app" value="...path\webview-helloworld.apk" />		
+		<para name="app-package" value="com.example.helloworld" />
+		<para name="app-activity" value=".MainActivity" />					
+  </platform>
+  <platform name="android">
+		<para name="remote_server" value="http://127.0.0.1:4723/wd/hub" />
+		<para name="device" value="android" />
+		<para name="app" value="...path\yourNativeApp.apk" />		
+		<para name="app-package" value="yourAppPackage" />
+		<para name="app-activity" value=".yourAppActivity" />					
+  </platform>
+  <platform name="ie">
+		<para name="url" value="http://www.google.com.hk" />	
+  </platform>  
+  <platform name="chrome">
+		<para name="url" value="http://www.google.com.hk" />	
+  </platform>
+  <platform name="firefox">
+		<para name="url" value="http://www.google.com.hk" />	
+  </platform>
+</platformpool>

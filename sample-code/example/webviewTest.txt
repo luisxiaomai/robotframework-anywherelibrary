@@ -1,0 +1,18 @@
+*** Settings ***
+Suite Setup       Initial Driver    ${platform}
+Suite Teardown    Tear Down Driver
+Library           AnywhereLibrary
+
+*** Test Cases ***
+Search "robotframework-anywherelibrary" in google
+    Run Keyword If    "${platform}"=="selendroid" or "${platform}"=="iphone"    Go to url
+    Type    //input[@name="q"]    robotframework-anywherelibrary
+    Run Keyword If    "${platform}"=="selendroid" or "${platform}"=="iphone"    click    //button[@type="submit"]    ELSE    Click    //input[@type="submit"]
+
+*** Keywords ***
+Go to url
+    Run Keyword If    "${platform}"=="selendroid"    Type    //EditText    http://www.google.com.hk    ELSE IF    "${platform}"=="iphone"
+    ...    Type    //textfield[1]    http://www.google.com.hk
+    Run Keyword If    "${platform}"=="selendroid"    click    //Button    ELSE IF    "${platform}"=="iphone"    click
+    ...    //button[1]
+    Switch To Webview
