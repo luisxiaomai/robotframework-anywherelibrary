@@ -15,17 +15,17 @@ The recommended installation method is using pip:
 
 ##Directory Layout
 
-doc/
-    Keyword documentation.
+####doc/
+>Keyword documentation.
     
-sample-code/
-	A sample test case which can run in desktop browser, sample android and ios webview app with different platform parameter input.
+####sample-code/
+>A sample test case which can run in desktop browser, sample android and ios webview app with different platform parameter input.
 
-src/base
-    Python source code.
+####src/base
+>Python source code.
     
-src/cfg
-	Confuguration file which stores all parameters for initialling driver.
+####src/cfg
+>Confuguration file which stores all parameters for initialling driver.
 
 ##Usage
 
