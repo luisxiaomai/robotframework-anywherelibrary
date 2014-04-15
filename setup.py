@@ -8,7 +8,7 @@ import os
 execfile(join(dirname(__file__), 'src', 'AnywhereLibrary', 'version.py'))
 
 setup(  
-    name = "AnywhereLibrary",
+    name = "robotframework-anywherelibrary",
     version= VERSION,
     package_dir  = {'' : 'src'},
     packages=['AnywhereLibrary', 'AnywhereLibrary.base'],

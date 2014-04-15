@@ -10,7 +10,7 @@ On the other hand, it's highly recommed that you can fork this repository as you
 
 ##Installation
 
-The recommended installation method is using pip:
+The recommended installation method is using [pip](http://www.pip-installer.org/en/latest/):
 	
 	pip install robotframework-anywherelibrary
 
