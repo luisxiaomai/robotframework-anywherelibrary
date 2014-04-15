@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <platformpool>
   <platform name="iphone">
-		<para name="remote_server" value="http://localhost:4723/wd/hub" />
+		<para name="remote_server" value="http://127.0.0.1:4723/wd/hub" />
 		<para name="device" value="iphone Simulator" />
 		<para name="app" value="/...path/WebViewApp.app" />	
   </platform>
   <platform name="ipad">
-		<para name="remote_server" value="http://10.59.154.141:4723/wd/hub" />
+		<para name="remote_server" value="http://127.0.0.1:4723/wd/hub" />
 		<para name="device" value="ipad Simulator" />
 		<para name="app" value="/...path/WebViewApp.app" />	
   </platform>

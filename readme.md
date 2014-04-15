@@ -1,11 +1,12 @@
-AnywhereLibrary for robotframework
-==========
+#AnywhereLibrary for robotframework
 
 ##Introduction
 
 AnywhereLibrary is a cross platform(desktop browser,android,ios) testing library for Robot Framework that leverages the [Selenium 2(WebDriver)](<http://seleniumhq.org/docs/03_webdriver.html/>) libraries internally to control a web browser and [appium](<http://appium.io/>) as mobile test automation framework for use with native and hybrid app. 
 
 This library is specially suitable for handling [SPA(single-page apps)](http://en.wikipedia.org/wiki/Single-page_application) with responsive design pattern. WIth this you only need generate a set of scripts to cover all platform(desktop browser ,android,ios). 
+
+On the other hand, it's highly recommed that you can fork this repository as your prototype. According to your real business requirements to customize your owner anywherelibrary.
 
 ##Installation
 
@@ -40,14 +41,16 @@ Before test case you must using *'Initial Driver'* keyword with platfrom value a
 
 ##Run sample case
 	$ pybot --variable platform:chrome webviewTest.txt
+	$ pybot --variable platform:firefox webviewTest.txt
+	$ pybot --variable platform:iphone webviewTest.txt
 	
 ##Documentation
 * keyword glance
 
 	- `Initial Driver`
 	- `Tear Down Driver`
-	- `click`
-	- `type`
+	- `Click`
+	- `Type`
 	- `Element Find`
 	- `Get Text`
 	- `Get Value`
