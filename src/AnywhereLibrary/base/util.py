@@ -53,10 +53,6 @@ class Util():
         
         *device* argument specify device like samsung, xiaomi,normally it dosen't need specify.
         
-        Possible values for device are as follows: | samsung   |  
-        
-       *filepath* argument specify platform specific parameters stored path if env variable "ANYWHERE_LIBRARY_CONFIGURATION_FILE" is not set, default path is ".../Python27/Lib/site-packages/AnywhereLibrary/cfg/configuration.xml".
-        
         Example:
         | initialDriver  | ${platform}  | 
         
