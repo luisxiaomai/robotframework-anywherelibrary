@@ -24,7 +24,6 @@ class Util():
     captureScreenShot="False"
 
     
-    #self.driver.implicitly_wait(20)
      
     def __init__(self):
         '''
@@ -72,8 +71,6 @@ class Util():
                                            desired_capabilities={
                                            'browserName': '',
                                            'device':Util._getPara('device'),
-                                           #'platform': 'Mac',
-                                           #'version': '6.1',
                                            'app': Util._getPara('app')
                                            })        
         elif platform=='ipad':
@@ -82,8 +79,6 @@ class Util():
                                            desired_capabilities={
                                            'browserName': '',
                                            'device': Util._getPara('device'),
-                                           #'platform': 'Mac',
-                                           #'version': '6.1',
                                            'app': Util._getPara('app')
                                            })
         elif platform in ['selendroid','android']:
@@ -91,9 +86,6 @@ class Util():
                                            desired_capabilities={
                                            'device': Util._getPara('device'),
                                            'app': os.path.abspath(Util._getPara('app')),
-                                           #C:\\Users\\I072687\\Desktop\\workspace\\Anywhere\\app\\SAPAnywhereAndroid.apk
-                                           #'app': '/Users/I072687/appium/app/SAPAnywhereAndroid.apk',
-                                           #'app': "http://10.58.80.194:8081/store/anw/SAPAnywhereAndroid.apk",
                                            'app-package': Util._getPara('app-package'),
                                            'app-activity': Util._getPara('app-activity')
                                            })
@@ -122,8 +114,6 @@ class Util():
         if Util.platform=='iphone' or Util.platform=='ipad':
             handle=Util.driver.window_handles[0]
             Util.driver.switch_to_window(handle)
-            #for handle in self.driver.window_handles:
-            #self.driver.switch_to_window(handle)
         elif Util.platform=='selendroid':
             Util.driver.switch_to_window('WEBVIEW')
     
