@@ -65,22 +65,28 @@ class Element(KeywordGroup):
         """
         return (self.element_find(xpathLocator,False) != None)
         
-    def page_should_contain_element(self,xpathLocator):
+    def page_should_contain_element(self,xpathLocator,errorMessage=None):
         """Verifies that current page contains element.
         """
         if self.is_element_present(xpathLocator):
             self._info('Current page contains element with xpathlocator %s'%xpathLocator)
         else:
-            self._warn('Current page should not contain element with xpathlocator %s'%xpathLocator)
+            if errorMessage is not None:
+                self._error(errorMessage)
+            else:
+                self._error('Current page does not contain element with xpathlocator %s'%xpathLocator)
 
 
-    def page_should_not_contain_element(self,xpathLocator):
+    def page_should_not_contain_element(self,xpathLocator,errorMessage=None):
         """Verifies that current page should not contain element.
         """
         if not self.is_element_present(xpathLocator):
             self._info('Current page should not contain element with xpathlocator %s'%xpathLocator)
         else:
-            self._warn('Current page contains element with xpathlocator %s'%xpathLocator)
+            if errorMessage is not None:
+                self._error(errorMessage)
+            else:
+                self._error('Current page contains element with xpathlocator %s'%xpathLocator)
             
     def get_matching_xpath_count(self, xpathLocator):
         """Returns number of elements matching `xpath`
