@@ -30,7 +30,7 @@ class AnywhereLibrary(
 
     Prior to running test cases using AnywhereLibrary, AnywhereLibrary must be
     imported into your Robot test suite , and the `Initial Driver` keyword must
-     be used to initial a driver to the desired location and `Tear Down Driver` driver after finishing executing test cases(see `initialDriver`,`tearDownDriver` keyword).
+     be used to initial a driver to the desired location and `Tear Down Driver` driver after finishing executing test cases(see `initial driver`,`teardown driver` keyword).
      
     """
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
