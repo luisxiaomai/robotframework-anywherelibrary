@@ -6,7 +6,7 @@ AnywhereLibrary is a cross platform(desktop browser,android,ios) testing library
 
 This library is specially suitable for handling [SPA(single-page apps)](http://en.wikipedia.org/wiki/Single-page_application) with responsive design pattern. WIth this you only need generate a set of scripts to cover all platform(desktop browser ,android,ios). 
 
-On the other hand, no any UI test automation framework is made for your real busines. If this library can't be suitable for your business, it's highly recommed that you can fork this repository as your prototype for UI test automation. According to your real business requirements to customize your own anywherelibrary.
+On the other hand, no any UI test automation framework is made for your real business. If this library can't be suitable for your business, it's highly recommed that you can fork this repository as your prototype for UI test automation. According to your real business requirements to customize your own anywherelibrary.
 
 ##Installation
 
