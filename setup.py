@@ -15,7 +15,7 @@ setup(
     author = "luis.lu",
     author_email = "luzhenyuhnr@126.com",
     platforms='any',
-    install_requires=['decorator >= 3.3.2','selenium >= 2.32.0','robotframework >= 2.6.0','docutils >= 0.8.1'],
+    install_requires=['decorator >= 3.3.2','selenium >= 2.32.0','robotframework >= 2.6.0','docutils >= 0.8.1','Appium-Python-Client >= 0.4'],
     url = "https://github.com/luisxiaomai/robotframework-anywherelibrary",
     description = "Robotframework test library for cross platform:android,ios,browser",
     include_package_data = True,	
