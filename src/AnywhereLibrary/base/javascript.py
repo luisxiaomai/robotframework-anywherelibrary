@@ -1,6 +1,4 @@
 #coding=utf-8
-import os
-from selenium.common.exceptions import WebDriverException
 from keywordgroup import KeywordGroup
 from util import Util
 

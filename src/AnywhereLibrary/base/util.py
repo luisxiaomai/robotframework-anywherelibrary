@@ -1,16 +1,8 @@
 #coding=utf-8
 
 import os
-import time
-import logging
-from time import sleep
 from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait # available since 2.4.0
-from selenium.webdriver.support import expected_conditions as EC # available since 2.26.0
-from selenium.common.exceptions import NoSuchElementException
-from selenium.common.exceptions import TimeoutException  
-from selenium.common.exceptions import WebDriverException 
+from appium import webdriver as appiumdriver
 from xml.etree import ElementTree as ET
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from keywordgroup import KeywordGroup
@@ -18,7 +10,7 @@ import AnywhereLibrary
 
 class Util(KeywordGroup):
     driver=None
-    platform = None    
+    platform = None     
     device = None    
     configtree=None
     captureScreenShot="False"
@@ -43,12 +35,16 @@ class Util(KeywordGroup):
         *captureScreenShot* argument : trigger for deciding if to take captureScreenShot.
         
         *device* argument specify device like samsung, xiaomi,normally it dosen't need specify.
-                        
+        
+        Possible values for device are as follows: | samsung   |  
+        
+       *filepath* argument specify platform specific parameters stored path if env variable "ANYWHERE_LIBRARY_CONFIGURATION_FILE" is not set, default path is ".../Python27/Lib/site-packages/AnywhereLibrary/cfg/configuration.xml".
+        
         Example:
         | initialDriver  | ${platform}  | 
         
         """
-        Util.platform=platform
+        Util.platform=platform.lower()
         Util.device=device
         Util.captureScreenShot=captureScreenShot
         if os.environ.get('ANYWHERE_LIBRARY_CONFIGURATION_FILE')!=None:
@@ -57,67 +53,85 @@ class Util(KeywordGroup):
             file_path=os.path.join(os.path.dirname(AnywhereLibrary.__file__),"cfg/configuration.xml")
             configuration_file_path=os.path.abspath(file_path)
         self._loadConfigFile(configuration_file_path)
-        if platform=='iphone':
-            Util.driver = webdriver.Remote(
+        if Util.platform=='iphone':
+            Util.driver = appiumdriver.Remote(
                                            command_executor=self._getPara('remote_server'),
                                            desired_capabilities={
-                                           'browserName': '',
-                                           'device':self._getPara('device'),
+                                           'deviceName':self._getPara('deviceName'),
+                                           'platformName':self._getPara('platformName'),
+                                           'platformVersion':self._getPara('platformVersion'),
                                            'app': self._getPara('app')
                                            })        
-        elif platform=='ipad':
-            Util.driver = webdriver.Remote(
+        elif Util.platform=='ipad':
+            Util.driver = appiumdriver.Remote(
                                            command_executor=self._getPara('remote_server'),
                                            desired_capabilities={
-                                           'browserName': '',
-                                           'device': self._getPara('device'),
+                                           'deviceName': self._getPara('deviceName'),
+                                           'platformName':self._getPara('platformName'),
+                                           'platformVersion':self._getPara('platformVersion'),
                                            'app': self._getPara('app')
                                            })
-        elif platform in ['selendroid','android']:
-            Util.driver = webdriver.Remote(command_executor=self._getPara('remote_server'),
+        elif Util.platform=='android':
+            Util.driver = appiumdriver.Remote(command_executor=self._getPara('remote_server'),
                                            desired_capabilities={
-                                           'device': self._getPara('device'),
+                                           'deviceName': self._getPara('deviceName'),
+                                           'platformName':self._getPara('platformName'),
                                            'app': os.path.abspath(self._getPara('app')),
-                                           'app-package': self._getPara('app-package'),
-                                           'app-activity': self._getPara('app-activity')
+                                           'appPackage': self._getPara('appPackage'),
+                                           'appActivity': self._getPara('appActivity')
                                            })
-        elif platform=='chrome':
+        elif Util.platform =='selendroid':
+            Util.driver = appiumdriver.Remote(command_executor=self._getPara('remote_server'),
+                                           desired_capabilities={
+                                           'deviceName': self._getPara('deviceName'),
+                                           'platformName':self._getPara('platformName'),
+                                           'automationName': os.path.abspath(self._getPara('automationName')),
+                                           'app': os.path.abspath(self._getPara('app')),
+                                           'appPackage': self._getPara('appPackage'),
+                                           'appActivity': self._getPara('appActivity')
+                                           })
+
+        elif Util.platform=='chrome':
             Util.driver=webdriver.Chrome()
             Util.driver.maximize_window()
             self.navigate_to_url(self._getPara('url'))
-        elif platform=='firefox':
+        elif Util.platform=='firefox':
             Util.driver=webdriver.Firefox()
             Util.driver.maximize_window()
             self.navigate_to_url(self._getPara('url'))
-        elif platform=='ie':
+        elif Util.platform=='ie':
 	    caps = DesiredCapabilities.INTERNETEXPLORER
             caps['ignoreProtectedModeSettings'] = True
             Util.driver=webdriver.Ie(capabilities=caps)
             Util.driver.maximize_window()
             self.navigate_to_url(self._getPara('url'))
        
-    def switch_to_webview(self):
+    def switch_to_webview(self,index=1):
         """ Using this method before you do action of any web element in mobile. 
+
+        *index* argument specifies which webview you want to switch.
         
         Example:
         | switch to webview  |
         """
+        self._info('Current app contains below contexts(%s)'%Util.driver.contexts)
         if Util.platform=='iphone' or Util.platform=='ipad':
-            handle=Util.driver.window_handles[0]
-            Util.driver.switch_to_window(handle)
+            Util.driver.switch_to.context('WEBVIEW_%s'%index)
         elif Util.platform=='selendroid':
-            Util.driver.switch_to_window('WEBVIEW')
-    
+            index=int(index)-1
+            Util.driver.switch_to.context('WEBVIEW_%s'%index)
+       
     def switch_to_native(self):
         """ Using this method before you do action of any native element in mobile. 
         
         Example:
         | switch to native  |
         """
+        self._info('Current app contains below contexts(%s)'%Util.driver.contexts)
         if Util.platform=='iphone' or Util.platform=='ipad':
-            Util.driver.execute_script('mobile: leaveWebView')
+            Util.driver.switch_to.context('NATIVE_APP')
         elif Util.platform=='selendroid':
-            Util.driver.switch_to_window('NATIVE_APP')    
+            Util.driver.switch_to.context('NATIVE_APP')    
     
     def navigate_to_url(self,url):
         """ Using this method if you want to navigate to specified url. 
