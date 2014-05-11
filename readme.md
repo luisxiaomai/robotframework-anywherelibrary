@@ -72,7 +72,7 @@ Before test case you must using *'Initial Driver'* keyword with platfrom value a
 More details about keyword documentation could be found at [Keyword Documentation](http://luisxiaomai.github.io/robotframework-anywherelibrary/doc/AnywhereLibraryDocument.html>)
 
 ##Plan
-Do more enhancements after appium 1.0 released.
+AnywhereLibrary 1.1.0 version which is mainly adapt to appium 1.0 is in process.
 
 ##FAQ
 
