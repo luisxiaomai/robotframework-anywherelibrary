@@ -33,7 +33,7 @@ class Waiting(KeywordGroup):
             
         """
         try:
-            WebDriverWait(Util.driver, float(timeout)).until(EC.presence_of_element_located(locator))
+            WebDriverWait(Util.driver, float(timeout)).until_not(EC.presence_of_element_located(locator))
         except TimeoutException:
             self._warn("Wait until no such element '%s' timeout in '%s'"%(locator,float(timeout)))
             
