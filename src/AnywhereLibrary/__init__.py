@@ -31,6 +31,24 @@ class AnywhereLibrary(
     Prior to running test cases using AnywhereLibrary, AnywhereLibrary must be
     imported into your Robot test suite , and the `Initial Driver` keyword must
      be used to initial a driver to the desired location and `Tear Down Driver` driver after finishing executing test cases(see `initial driver`,`teardown driver` keyword).
+
+    *Locating elements*
+
+    All keywords in AnywhereLibrary that need to find an element on the page
+    take an argument, `locator`.  AnywhereLibrary support a subset of the WebDriver locator strategies:
+    currently available locator strategies are using:
+
+    find by *"class"* (i.e., ui component type)
+    
+    find by *"xpath"* (i.e., an abstract representation of a path to an element, with certain constraints)
+
+    Supported strategies are:
+
+    | *Strategy* | *Example*                               | *Description*                                |
+    | xpath      | Click `|` //div[@id='my_element']       | Matches with arbitrary XPath expression      |
+    | xpath      | Click `|` xpath=//div[@id='my_element'] | Matches with arbitrary XPath expression      |
+    | class      | Click `|` class=android.widget.Button   | Matches another element by their class name  |
+    | ......     | Coming soon ......                      | Coming soon.....                             |
      
     """
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
@@ -40,7 +58,7 @@ class AnywhereLibrary(
 
     def __init__(self,run_on_failure='Capture Page Screenshot'):
         """
-        | Library `|` AnywhereLibrary   | # Import library into where you will use                                 |
+        | Library `|` AnywhereLibrary   | # Import library into where you will use |
         """
         for base in AnywhereLibrary.__bases__:
             base.__init__(self)
