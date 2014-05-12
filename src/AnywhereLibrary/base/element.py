@@ -82,7 +82,10 @@ class Element(KeywordGroup):
         """Returns number of elements matching `locator`
 
         """
-        count = len(self._element_finder.find(locator))
+        if self._element_finder.find(locator) is None:
+            count=0
+        else:
+            count = len(self._element_finder.find(locator))
         return str(count)
            
     def get_text(self,locator):
