@@ -11,7 +11,7 @@ class ElementFinder(object):
 
     def find(self, locator):
         (prefix, criteria) = self._parse_locator(locator)
-        if prefix is None and criteria.startswith('//'):
+        if prefix is None:
             return self._find_by_xpath(criteria)
         else:
             strategy = self._strategies.get(prefix)
@@ -26,10 +26,10 @@ class ElementFinder(object):
         criteria = locator
         if not locator.startswith('//'):
             locator_parts = locator.partition('=')
-            if len(locator_parts[1]) > 0:
+            if len(locator_parts[1]) > 0 and locator_parts[0].lower() in ["class","xpath"]:
                 prefix = locator_parts[0].strip().lower()
                 criteria = locator_parts[2].strip()
-            else:
+            elif len(locator_parts[1])==0:
                 raise ValueError("Element locator(%s) is without '=' in your locator, wrong format"%locator)
         return (prefix, criteria)
 
