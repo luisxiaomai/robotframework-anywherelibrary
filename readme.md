@@ -49,9 +49,9 @@ All keywords in AnywhereLibrary that need to find an element on the page take an
 Supported strategies are:
 
     | *Strategy* | *Example*                               | *Description*                                |
-    | xpath      | Click `|` //div[@id='my_element']       | Matches with arbitrary XPath expression      |
-    | xpath      | Click `|` xpath=//div[@id='my_element'] | Matches with arbitrary XPath expression      |
-    | class      | Click `|` class=android.widget.Button   | Matches another element by their class name  |
+    | xpath      | Click  | //div[@id='my_element']        | Matches with arbitrary XPath expression      |
+    | xpath      | Click  | xpath=//div[@id='my_element']  | Matches with arbitrary XPath expression      |
+    | class      | Click  | class=android.widget.Button    | Matches another element by their class name  |
     | ......     | Coming soon ......                      | Coming soon.....                             |
      
 ##Run sample case
