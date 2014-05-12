@@ -1,4 +1,4 @@
-#AnywhereLibrary for robotframework
+	#AnywhereLibrary for robotframework
 
 ##Introduction
 
@@ -37,8 +37,23 @@ See [Robot Framework User Guide](https://code.google.com/p/robotframework/wiki/U
 As it uses Appium for mobile solution, please make sure your Appium server is up and running.
 For how to use Appium please refer to [Appium Documentation](http://appium.io/getting-started.html).
 
-Before test case you must using *'Initial Driver'* keyword with platfrom value as paramter input, after test case you must using *'Tear Down Driver'* keyword to tear down related driver. Also you need do some modification in *`configuration.xml`* file in *`/AnywhereLibrary/cfg`*.
+####Before test case
+You must using *'Initial Driver'* keyword with platfrom value as paramter input, after test case you must      using *'Tear Down Driver'* keyword to tear down related driver. Also you need do some modification in *`configuration.xml`* file in *`/AnywhereLibrary/cfg`*.
 
+####Locating elements
+
+All keywords in AnywhereLibrary that need to find an element on the page take an argument, `locator`.  AnywhereLibrary support a subset of the WebDriver locator strategies.Currently available locator strategies are using:
+    
+    find by "class" (i.e., ui component type)
+    find by "xpath" (i.e., an abstract representation of a path to an element, with certain constraints)
+Supported strategies are:
+
+    | *Strategy* | *Example*                               | *Description*                                |
+    | xpath      | Click `|` //div[@id='my_element']       | Matches with arbitrary XPath expression      |
+    | xpath      | Click `|` xpath=//div[@id='my_element'] | Matches with arbitrary XPath expression      |
+    | class      | Click `|` class=android.widget.Button   | Matches another element by their class name  |
+    | ......     | Coming soon ......                      | Coming soon.....                             |
+     
 ##Run sample case
 	$ pybot --variable platform:chrome webviewTest.txt
 	$ pybot --variable platform:firefox webviewTest.txt
