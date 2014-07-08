@@ -5,21 +5,21 @@
 		<para name="deviceName" value="iphone Simulator" />
 		<para name="platformName" value="ios" />
 		<para name="platformVersion" value="7.1" />
-		<para name="app" value="/Users/。。。/Github/robotframework-anywherelibrary/sample-code/apps/IOS-WebViewApp/WebViewApp.app" />	
+		<para name="app" value="/Users/.../Github/robotframework-anywherelibrary/sample-code/apps/IOS-WebViewApp/WebViewApp.app" />	
   </platform>
   <platform name="ipad">
 		<para name="remote_server" value="http://127.0.0.1:4723/wd/hub" />
 		<para name="deviceName" value="ipad Simulator" />
 		<para name="platformName" value="ios" />
 		<para name="platformVersion" value="7.1" />
-		<para name="app" value="/Users/。。。/Github/robotframework-anywherelibrary/sample-code/apps/IOS-WebViewApp/WebViewApp.app" />	
+		<para name="app" value="/Users/.../Github/robotframework-anywherelibrary/sample-code/apps/IOS-WebViewApp/WebViewApp.app" />	
   </platform>
   <platform name="selendroid">
 		<para name="remote_server" value="http://127.0.0.1:4723/wd/hub" />
 		<para name="deviceName" value="Galaxy Note2" />
 		<para name="platformName" value="android" />
 		<para name="automationName" value="selendroid" />
-		<para name="app" value="/Users/。。。/Github/robotframework-anywherelibrary/sample-code/apps/Android-WebViewApp/webview-helloworld.apk" />		
+		<para name="app" value="/Users/.../Github/robotframework-anywherelibrary/sample-code/apps/Android-WebViewApp/webview-helloworld.apk" />		
 		<para name="appPackage" value="com.example.helloworld" />
 		<para name="appActivity" value=".MainActivity" />					
   </platform>
