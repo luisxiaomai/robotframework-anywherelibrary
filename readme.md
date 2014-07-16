@@ -87,8 +87,7 @@ Supported strategies are:
 More details about keyword documentation could be found at [Keyword Documentation](http://luisxiaomai.github.io/robotframework-anywherelibrary/doc/AnywhereLibraryDocument.html>)
 
 ##Plan
-* AnywhereLibrary 1.1.0 version which is mainly adapt to appium 1.0(In process).
-* Add more locator strategy.
+* Add more keywrods.
 
 
 
