@@ -2,9 +2,9 @@
 
 ## Introduction
 
-AnywhereLibrary is a cross platform (desktop browser, Android, IOS) testing library for Robot Framework that leverages the [Selenium 2 (WebDriver)](<http://seleniumhq.org/docs/03_webdriver.html/>) libraries internally to control a web browser and [Appium](<http://appium.io/>) as mobile test automation framework for use with native and hybrid apps. 
+AnywhereLibrary is a cross platform (desktop browser, Android, iOS) testing library for Robot Framework that leverages the [Selenium 2 (WebDriver)](<http://seleniumhq.org/docs/03_webdriver.html/>) libraries internally to control a web browser and [Appium](<http://appium.io/>) as mobile test automation framework for use with native and hybrid apps. 
 
-This library is especially suitable for handling [SPA (single-page apps)](http://en.wikipedia.org/wiki/Single-page_application) with responsive design patterns. With this you only need to generate a set of scripts to cover all platforms (desktop browser, Android, IOS). 
+This library is especially suitable for handling [SPA (single-page apps)](http://en.wikipedia.org/wiki/Single-page_application) with responsive design patterns. With this you only need to generate a set of scripts to cover all platforms (desktop browser, Android, iOS). 
 
 On the other hand, no any UI test automation framework is made for your real business. If this library isn't be suitable for your business, it's highly recommed that you fork this repository as a prototype for UI test automation. Customize your own AnywhereLibrary in accordance to your actual business requirements.
 
@@ -20,7 +20,7 @@ pip install robotframework-anywherelibrary
 > Keyword documentation.
     
 #### sample-code/
-> A sample test case which can run in desktop browser, sample Android and IOS webview apps with different platform parameter inputs.
+> A sample test case which can run in desktop browser, sample Android and iOS webview apps with different platform parameter inputs.
 
 #### src/base
 > Python source code.
