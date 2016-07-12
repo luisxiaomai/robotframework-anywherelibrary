@@ -1,5 +1,6 @@
 import os
-from robot.variables import GLOBAL_VARIABLES
+#from robot.variables import GLOBAL_VARIABLES
+from robot.libraries.BuiltIn import BuiltIn
 from robot.api import logger
 from keywordgroup import KeywordGroup
 
