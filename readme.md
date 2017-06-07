@@ -86,7 +86,7 @@ Keywords at a Glance:
 * mobile gestures
   - Coming Soon...
 
-More details about keyword documentation could be found at [Keyword Documentation](http://luisxiaomai.github.io/robotframework-anywherelibrary/doc/AnywhereLibraryDocument.html>)
+More details about keyword documentation could be found at [Keyword Documentation](http://luisxiaomai.github.io/robotframework-anywherelibrary/doc/AnywhereLibraryDocument.html)
 
 ## Plan
 
