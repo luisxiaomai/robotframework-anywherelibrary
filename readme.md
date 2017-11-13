@@ -2,7 +2,7 @@
 
 [![PyPI version](https://badge.fury.io/py/robotframework-anywherelibrary.svg)](https://badge.fury.io/py/robotframework-anywherelibrary) 
 [![Build status](https://travis-ci.org/luisxiaomai/robotframework-anywherelibrary.svg?branch=master)](https://travis-ci.org/luisxiaomai/robotframework-anywherelibrary)
-[![GitHub license](https://img.shields.io/badge/license-ApacheLicense2.0-blue.svg)](https://travis-ci.org/luisxiaomai/robotframework-anywherelibrary)(http://www.apache.org/licenses/LICENSE-2.0)
+[![GitHub license](https://img.shields.io/badge/license-ApacheLicense2.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 ## Introduction
 
 AnywhereLibrary is a cross platform (desktop browser, Android, iOS) testing library for Robot Framework that leverages the [Selenium 2 (WebDriver)](<http://seleniumhq.org/docs/03_webdriver.html/>) libraries internally to control a web browser and [Appium](<http://appium.io/>) as mobile test automation framework for use with native and hybrid apps. 
