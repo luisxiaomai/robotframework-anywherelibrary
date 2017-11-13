@@ -5,6 +5,6 @@ install:
   - pip install codecov
 script:  
   - python setup.py install
-  - nosetests -sv --with-coverage --cover-package=anywherelibrary
+  - nosetests -sv --with-coverage --cover-package=AnywhereLibrary
 after_success:
   - codecov
