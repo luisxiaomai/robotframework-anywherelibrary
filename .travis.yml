@@ -1,7 +1,10 @@
 language: python
 python:
   - "2.7"
+install:
+  - pip install codecov
 script:  
   - python setup.py install
+  - nosetests -sv --with-coverage --cover-package=anywherelibrary
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - codecov
