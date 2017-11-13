@@ -1,6 +1,7 @@
 # [AnywhereLibrary for robotframework](https://github.com/luisxiaomai/robotframework-anywherelibrary)
 [![PyPI version](https://badge.fury.io/py/robotframework-anywherelibrary.svg)](https://badge.fury.io/py/robotframework-anywherelibrary) 
 [![Build status](https://travis-ci.org/luisxiaomai/robotframework-anywherelibrary.svg?branch=master)](https://travis-ci.org/luisxiaomai/robotframework-anywherelibrary)
+[![codecov](https://codecov.io/gh/luisxiaomai/robotframework-anywherelibrary/branch/master/graph/badge.svg)](https://codecov.io/gh/luisxiaomai/robotframework-anywherelibrary)
 [![Join the chat at https://gitter.im/anywherelibrary/Lobby](https://badges.gitter.im/anywherelibrary/Lobby.svg)](https://gitter.im/anywherelibrary/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![GitHub license](https://img.shields.io/badge/license-ApacheLicense2.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 ## Introduction
