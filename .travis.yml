@@ -3,3 +3,5 @@ python:
   - "2.7"
 script:  
   - python setup.py install
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
