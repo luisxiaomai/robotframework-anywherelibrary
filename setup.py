@@ -5,7 +5,7 @@ except ImportError:
 from os.path import join, dirname
 import os
 
-execfile(join(dirname(__file__), 'src', 'AnywhereLibrary', 'version.py'))
+exec(open(join(dirname(__file__), 'src', 'AnywhereLibrary', 'version.py')).read())
 
 setup(  
     name = "robotframework-anywherelibrary",
