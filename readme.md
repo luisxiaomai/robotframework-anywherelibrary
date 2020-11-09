@@ -14,9 +14,8 @@ On the other hand, no any UI test automation framework is made for your real bus
 
 ## Installation
 
-The recommended installation method is using [pip](http://www.pip-installer.org/en/latest/):
 ```bash	
-pip install robotframework-anywherelibrary
+python3 setup.py install
 ```
 ## Directory Layout
 
