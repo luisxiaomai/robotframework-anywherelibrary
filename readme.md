@@ -10,7 +10,7 @@ AnywhereLibrary is a cross platform (desktop browser, Android, iOS) testing libr
 
 This library is especially suitable for handling [SPA (single-page apps)](http://en.wikipedia.org/wiki/Single-page_application) with responsive design patterns. With this you only need to generate a set of scripts to cover all platforms (desktop browser, Android, iOS). 
 
-On the other hand, no any UI test automation framework is made for your real business. If this library isn't be suitable for your business, it's highly recommed that you fork this repository as a prototype for UI test automation. Customize your own AnywhereLibrary in accordance to your actual business requirements.
+On the other hand, not any UI test automation framework is made for your real business. If this library isn't suitable for your business, it's highly recommended that you fork this repository as a prototype for UI test automation. Customize your own AnywhereLibrary in accordance to your actual business requirements.
 
 ## Installation
 
@@ -38,7 +38,7 @@ To write tests with Robot Framework and AnywhereLibrary, AnywhereLibrary must be
 As it uses Appium for its mobile solution, please make sure your Appium server is up and running. For how to use Appium, please refer to the [Appium Documentation](http://appium.io/getting-started.html).
 
 ##### Before Running the Test Case
-You must use the *`Initial Driver`* keyword with platfrom value as the paramter input; after the test case you must use *`Tear Down Driver`* keyword to tear down the related driver. Also you need do some modifications in *`configuration.xml`* file in *`/AnywhereLibrary/cfg`*.
+You must use the *`Initial Driver`* keyword with platform value as the parameter input; after the test case you must use *`Tear Down Driver`* keyword to tear down the related driver. Also you need to do some modifications in *`configuration.xml`* file in *`/AnywhereLibrary/cfg`*.
 
 ##### Locating elements
 
